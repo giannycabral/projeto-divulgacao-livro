@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 20px 20px;
+    /* Aumentado padding-top para compensar navbar fixa */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.livro-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.livro-info:hover {
+    transform: translateY(-5px);
+}
+
+.capa-livro {
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.capa-livro:hover {
+    transform: scale(1.05);
+}
+
+.detalhes {
+    flex: 1;
+    text-align: left;
+}
+
+.detalhes h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.detalhes p {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.caracteristicas {
+    list-style: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.caracteristicas li {
+    margin: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.caracteristicas li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.autor {
+    padding: 40px;
+    background-color: #f8f9fa;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.autor-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.foto-autor {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sinopse {
+    padding: 40px;
+    background-color: #f8f9fa;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.sinopse-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.sinopse-content p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.comprar {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    .livro-info,
+    .autor-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .livro-info {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .detalhes {
+        text-align: center;
+    }
+
+    .caracteristicas li {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .caracteristicas li::before {
+        display: none;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .capa-livro,
+    .foto-autor {
+        margin: 0 auto 20px;
+    }
+
+    .foto-autor {
+        width: 150px;
+        height: 150px;
+    }
+}

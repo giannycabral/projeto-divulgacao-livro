@@ -13,7 +13,7 @@ Bem-vindo ao projeto **Divulgação de Livro**! Este projeto tem como objetivo p
 
 ## Tecnologias Utilizadas
 
-- **Frontend**: HTML, CSS
+- **Frontend**: HTML, CSS, Responsividade
 
 ## Como Executar o Projeto
 
